@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://3xnxwb8klmli"]
+
+[ext_resource type="PackedScene" uid="uid://bsq3l78136307" path="res://Prefab/Character/Player.tscn" id="2_f8aot"]
+[ext_resource type="PackedScene" uid="uid://cb74nm1u0debd" path="res://Prefab/Environment/Bush.tscn" id="3_55ubk"]
+[ext_resource type="Texture2D" uid="uid://d38v1jnicm3gg" path="res://Assets/Sprite-0002.png" id="4_ykw7c"]
+
+[node name="LEVEL_01" type="Node2D"]
+y_sort_enabled = true
+
+[node name="Player" parent="." instance=ExtResource("2_f8aot")]
+position = Vector2(112, 48)
+
+[node name="Bush" parent="." instance=ExtResource("3_55ubk")]
+position = Vector2(48, 88)
+
+[node name="Bush2" parent="." instance=ExtResource("3_55ubk")]
+position = Vector2(168, 88)
+
+[node name="Bush3" parent="." instance=ExtResource("3_55ubk")]
+position = Vector2(120, 128)
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+position = Vector2(224, 64)
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+position = Vector2(0, -13)
+texture = ExtResource("4_ykw7c")

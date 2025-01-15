@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://dw63t05ys1bav"]
+
+[ext_resource type="PackedScene" uid="uid://bsq3l78136307" path="res://Prefab/Character/Player.tscn" id="1_nynsf"]
+[ext_resource type="PackedScene" uid="uid://cb74nm1u0debd" path="res://Prefab/Environment/Bush.tscn" id="2_d2e4v"]
+
+[node name="LEVEL_02" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_nynsf")]
+position = Vector2(72, 88)
+
+[node name="Player2" parent="." instance=ExtResource("1_nynsf")]
+position = Vector2(208, 88)
+
+[node name="Player3" parent="." instance=ExtResource("1_nynsf")]
+position = Vector2(128, 40)
+
+[node name="Bush" parent="." instance=ExtResource("2_d2e4v")]
+position = Vector2(152, 104)
