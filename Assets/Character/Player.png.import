@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://csm25ljq02v33"
-path="res://.godot/imported/Bush.png-81b560f4b520438266ccb98d9a779b0b.ctex"
+uid="uid://cmcio38for5l"
+path="res://.godot/imported/Player.png-59adc4b55d5b4819461ac64a342911c0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Bush.png"
-dest_files=["res://.godot/imported/Bush.png-81b560f4b520438266ccb98d9a779b0b.ctex"]
+source_file="res://Assets/Character/Player.png"
+dest_files=["res://.godot/imported/Player.png-59adc4b55d5b4819461ac64a342911c0.ctex"]
 
 [params]
 
