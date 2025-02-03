@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=4 uid="uid://3xnxwb8klmli"]
+[gd_scene load_steps=12 format=4 uid="uid://3xnxwb8klmli"]
 
 [ext_resource type="PackedScene" uid="uid://bsq3l78136307" path="res://Prefab/Character/Player.tscn" id="2_f8aot"]
 [ext_resource type="PackedScene" uid="uid://cb74nm1u0debd" path="res://Prefab/Environment/Bush.tscn" id="3_55ubk"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://diuip8cx7iw3n" path="res://Assets/DirtTileset.png" id="5_wnnha"]
 [ext_resource type="PackedScene" uid="uid://c4sctlrkhvy8h" path="res://Prefab/Environment/Grass.tscn" id="6_js7cc"]
 [ext_resource type="Texture2D" uid="uid://bmmn1614186jl" path="res://Assets/CliffTileset.png" id="6_sd463"]
+[ext_resource type="PackedScene" uid="uid://bri0ew27j8knb" path="res://Prefab/Character/Bat.tscn" id="7_r5176"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ts7nr"]
 texture = ExtResource("5_wnnha")
@@ -724,6 +725,7 @@ texture_region_size = Vector2i(32, 32)
 [sub_resource type="TileSet" id="TileSet_d0d5w"]
 tile_size = Vector2i(32, 32)
 physics_layer_0/collision_layer = 1
+physics_layer_0/collision_mask = 0
 terrain_set_0/mode = 0
 terrain_set_0/terrain_0/name = "cliff "
 terrain_set_0/terrain_0/color = Color(0.835917, 0.0962892, 0.440607, 1)
@@ -732,7 +734,7 @@ sources/1 = SubResource("TileSetAtlasSource_va2qr")
 [node name="LEVEL_01" type="Node2D"]
 y_sort_enabled = true
 
-[node name="TextureRectBackgound" type="TextureRect" parent="."]
+[node name="Backgound" type="TextureRect" parent="."]
 offset_left = -80.0
 offset_top = -35.0
 offset_right = 336.0
@@ -775,6 +777,9 @@ position = Vector2(65, 128)
 [node name="Grass2" parent="Grass" instance=ExtResource("6_js7cc")]
 position = Vector2(84, 128)
 
+[node name="Grass7" parent="Grass" instance=ExtResource("6_js7cc")]
+position = Vector2(84, 121)
+
 [node name="Grass3" parent="Grass" instance=ExtResource("6_js7cc")]
 position = Vector2(244, 113)
 
@@ -786,3 +791,17 @@ position = Vector2(211, 113)
 
 [node name="Grass6" parent="Grass" instance=ExtResource("6_js7cc")]
 position = Vector2(195, 113)
+
+[node name="Bat" type="Node2D" parent="."]
+
+[node name="Bat1" parent="Bat" instance=ExtResource("7_r5176")]
+position = Vector2(258, 100)
+
+[node name="Bat2" parent="Bat" instance=ExtResource("7_r5176")]
+position = Vector2(146, 181)
+
+[node name="Bat3" parent="Bat" instance=ExtResource("7_r5176")]
+position = Vector2(94, 108)
+
+[node name="Bat4" parent="Bat" instance=ExtResource("7_r5176")]
+position = Vector2(234, 45)
