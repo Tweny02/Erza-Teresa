@@ -1,12 +1,13 @@
 '''
 # Godot v4.3
-v0.0.13.20250203
+v0.0.24.20250217
 	# Character
-		- Enemy bat
-	# CONST.
-		- enumrater
+		- player state
+		- bat ai
 	# EEffrct
-		- grass effect
+		- hit effect 丢失修复
+	# UI
+		- 玩家生命
 		
 '''
 
@@ -22,17 +23,19 @@ enum {MOVE,ROLL,ATTACK}
 
 # ====================VAR======================
 var state = MOVE
-var roll_vector = Vector2.LEFT
+var roll_vector = Vector2.DOWN
 @onready var animationPlayer = $AnimationPlayer
 @onready var animationTree = $AnimationTree
 @onready var animationState = animationTree.get("parameters/playback")
 @onready var swordHitbox = $Marker2D/SwordHitbox
+@onready var hurtbox = $Hurtbox
 
 
 # =======================FUNC========================
 func _ready():
 	animationTree.active = true
 	swordHitbox.velocity_vector = roll_vector
+	PlayerStates.no_health.connect(queue_free)
 func _physics_process(delta):
 	match state:
 		MOVE:
@@ -78,7 +81,9 @@ func move_state(delta):
 	if Input.is_action_just_pressed('attack'):
 		state = ATTACK 
 	elif Input.is_action_just_pressed('roll'):
+		PlayerStates.max_health -= 1
 		state = ROLL 
+		
 func attack_state():
 	velocity = Vector2.ZERO
 	animationState.travel('Attack')
@@ -92,4 +97,9 @@ func roll_animation_finished():
 	
 	state = MOVE
 	
-	
+func _on_hurtbox_area_entered(_area):
+	PlayerStates.health -= 1
+	print("玩家生命：")
+	print(PlayerStates.health)
+	hurtbox.start_invincible(1)
+	hurtbox.create_hit_effect()

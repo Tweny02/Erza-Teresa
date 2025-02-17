@@ -15,6 +15,10 @@ run/main_scene="res://Prefab/Level/LEVEL_01.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+PlayerStates="*res://Prefab/Character/Player/PlayerStates.tscn"
+
 [display]
 
 window/size/viewport_width=320

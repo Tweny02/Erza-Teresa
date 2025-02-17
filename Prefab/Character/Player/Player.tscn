@@ -1,9 +1,10 @@
-[gd_scene load_steps=53 format=3 uid="uid://bsq3l78136307"]
+[gd_scene load_steps=55 format=3 uid="uid://bsq3l78136307"]
 
 [ext_resource type="Script" path="res://Scripts/Character/Player/player.gd" id="1_xjine"]
 [ext_resource type="Texture2D" uid="uid://cmcio38for5l" path="res://Assets/Character/Player.png" id="2_wdukc"]
 [ext_resource type="PackedScene" uid="uid://djkl7om3rc0ip" path="res://Prefab/Overlap/Hixtbox.tscn" id="3_y2ix0"]
 [ext_resource type="Script" path="res://Scripts/Overlap/SwordHitbox.gd" id="4_f628u"]
+[ext_resource type="PackedScene" uid="uid://ccg1sbhnxfct0" path="res://Prefab/Overlap/Hurtbox.tscn" id="5_11djl"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_weobi"]
 radius = 2.0
@@ -684,6 +685,10 @@ transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jssht"]
 height = 32.0
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lbaea"]
+radius = 5.0
+height = 18.0
+
 [node name="Player" type="CharacterBody2D"]
 collision_layer = 2
 collision_mask = 17
@@ -710,10 +715,10 @@ libraries = {
 active = false
 tree_root = SubResource("AnimationNodeStateMachine_v6ydq")
 anim_player = NodePath("../AnimationPlayer")
-parameters/Attack/blend_position = Vector2(0, 0)
-parameters/Idle/blend_position = Vector2(0, 0)
-parameters/Roll/blend_position = Vector2(0.0286169, -0.574336)
-parameters/Run/blend_position = Vector2(0.151033, 0.395238)
+parameters/Attack/blend_position = Vector2(0, 1)
+parameters/Idle/blend_position = Vector2(0, 1)
+parameters/Roll/blend_position = Vector2(0, 1)
+parameters/Run/blend_position = Vector2(0, 1)
 
 [node name="Marker2D" type="Marker2D" parent="."]
 position = Vector2(0, -4)
@@ -730,4 +735,14 @@ position = Vector2(0, -4)
 shape = SubResource("CapsuleShape2D_jssht")
 disabled = true
 
+[node name="Hurtbox" parent="." instance=ExtResource("5_11djl")]
+collision_mask = 4
+
+[node name="CollisionShape2D" parent="Hurtbox" index="0"]
+position = Vector2(0, -6)
+shape = SubResource("CapsuleShape2D_lbaea")
+
+[connection signal="area_entered" from="Hurtbox" to="." method="_on_hurtbox_area_entered"]
+
 [editable path="Marker2D/SwordHitbox"]
+[editable path="Hurtbox"]

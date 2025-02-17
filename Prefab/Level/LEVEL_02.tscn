@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://dw63t05ys1bav"]
 
-[ext_resource type="PackedScene" uid="uid://bsq3l78136307" path="res://Prefab/Character/Player.tscn" id="1_nynsf"]
+[ext_resource type="PackedScene" uid="uid://bsq3l78136307" path="res://Prefab/Character/Player/Player.tscn" id="1_nynsf"]
 [ext_resource type="PackedScene" uid="uid://cb74nm1u0debd" path="res://Prefab/Environment/Bush.tscn" id="2_d2e4v"]
 
 [node name="LEVEL_02" type="Node2D"]

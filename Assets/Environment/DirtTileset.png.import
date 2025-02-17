@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://csm25ljq02v33"
-path="res://.godot/imported/Bush.png-08b079c90b4857c4c29dc6f77f62c6ca.ctex"
+uid="uid://diuip8cx7iw3n"
+path="res://.godot/imported/DirtTileset.png-4d3c9fd8fa18fea271a711c1948f3422.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Environment/Bush.png"
-dest_files=["res://.godot/imported/Bush.png-08b079c90b4857c4c29dc6f77f62c6ca.ctex"]
+source_file="res://Assets/Environment/DirtTileset.png"
+dest_files=["res://.godot/imported/DirtTileset.png-4d3c9fd8fa18fea271a711c1948f3422.ctex"]
 
 [params]
 

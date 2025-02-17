@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://diuip8cx7iw3n"
-path="res://.godot/imported/DirtTileset.png-71e475458d93476a24e808e933867a91.ctex"
+uid="uid://cal8n4rxbm7ko"
+path="res://.godot/imported/LargeShadow.png-627c32a8352ad9009f09e3963ce71808.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/DirtTileset.png"
-dest_files=["res://.godot/imported/DirtTileset.png-71e475458d93476a24e808e933867a91.ctex"]
+source_file="res://Assets/Environment/Shadows/LargeShadow.png"
+dest_files=["res://.godot/imported/LargeShadow.png-627c32a8352ad9009f09e3963ce71808.ctex"]
 
 [params]
 

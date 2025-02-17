@@ -1,12 +1,14 @@
-[gd_scene load_steps=12 format=4 uid="uid://3xnxwb8klmli"]
+[gd_scene load_steps=14 format=4 uid="uid://3xnxwb8klmli"]
 
-[ext_resource type="PackedScene" uid="uid://bsq3l78136307" path="res://Prefab/Character/Player.tscn" id="2_f8aot"]
+[ext_resource type="PackedScene" uid="uid://bsq3l78136307" path="res://Prefab/Character/Player/Player.tscn" id="2_f8aot"]
 [ext_resource type="PackedScene" uid="uid://cb74nm1u0debd" path="res://Prefab/Environment/Bush.tscn" id="3_55ubk"]
-[ext_resource type="Texture2D" uid="uid://do736dna4omug" path="res://Assets/GrassBackground.png" id="4_svyyg"]
-[ext_resource type="Texture2D" uid="uid://diuip8cx7iw3n" path="res://Assets/DirtTileset.png" id="5_wnnha"]
+[ext_resource type="Texture2D" uid="uid://do736dna4omug" path="res://Assets/Environment/GrassBackground.png" id="4_svyyg"]
+[ext_resource type="Texture2D" uid="uid://diuip8cx7iw3n" path="res://Assets/Environment/DirtTileset.png" id="5_wnnha"]
 [ext_resource type="PackedScene" uid="uid://c4sctlrkhvy8h" path="res://Prefab/Environment/Grass.tscn" id="6_js7cc"]
-[ext_resource type="Texture2D" uid="uid://bmmn1614186jl" path="res://Assets/CliffTileset.png" id="6_sd463"]
-[ext_resource type="PackedScene" uid="uid://bri0ew27j8knb" path="res://Prefab/Character/Bat.tscn" id="7_r5176"]
+[ext_resource type="Texture2D" uid="uid://bmmn1614186jl" path="res://Assets/Environment/CliffTileset.png" id="6_sd463"]
+[ext_resource type="PackedScene" uid="uid://bri0ew27j8knb" path="res://Prefab/Character/Enemy/Bat.tscn" id="7_r5176"]
+[ext_resource type="PackedScene" uid="uid://cjt06c2jq0lmn" path="res://Prefab/UI/HealthUI.tscn" id="8_h0qsl"]
+[ext_resource type="PackedScene" uid="uid://dcvt5swwrg1m" path="res://Prefab/Environment/Tree.tscn" id="8_xvyfr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ts7nr"]
 texture = ExtResource("5_wnnha")
@@ -742,6 +744,8 @@ offset_bottom = 207.0
 texture = ExtResource("4_svyyg")
 stretch_mode = 1
 
+[node name="HealthUI" parent="." instance=ExtResource("8_h0qsl")]
+
 [node name="Tile" type="Node2D" parent="."]
 
 [node name="Dirt" type="TileMapLayer" parent="Tile"]
@@ -753,52 +757,63 @@ tile_map_data = PackedByteArray("AAD+//7/AQAAAAAAAAD+////AQAAAAEAAAD/////AQABAAE
 tile_set = SubResource("TileSet_d0d5w")
 
 [node name="Player" parent="." instance=ExtResource("2_f8aot")]
-position = Vector2(112, 48)
+position = Vector2(67, 31)
 
-[node name="Bush" type="Node2D" parent="."]
+[node name="Bushes" type="Node2D" parent="."]
 
-[node name="Bush4" parent="Bush" instance=ExtResource("3_55ubk")]
+[node name="Bush4" parent="Bushes" instance=ExtResource("3_55ubk")]
 position = Vector2(275, 152)
 
-[node name="Bush3" parent="Bush" instance=ExtResource("3_55ubk")]
+[node name="Bush3" parent="Bushes" instance=ExtResource("3_55ubk")]
 position = Vector2(120, 128)
 
-[node name="Bush" parent="Bush" instance=ExtResource("3_55ubk")]
+[node name="Bush" parent="Bushes" instance=ExtResource("3_55ubk")]
 position = Vector2(48, 88)
 
-[node name="Bush2" parent="Bush" instance=ExtResource("3_55ubk")]
+[node name="Bush2" parent="Bushes" instance=ExtResource("3_55ubk")]
 position = Vector2(196, 67)
 
-[node name="Grass" type="Node2D" parent="."]
+[node name="Grasses" type="Node2D" parent="."]
 
-[node name="Grass" parent="Grass" instance=ExtResource("6_js7cc")]
+[node name="Grass" parent="Grasses" instance=ExtResource("6_js7cc")]
 position = Vector2(65, 128)
 
-[node name="Grass2" parent="Grass" instance=ExtResource("6_js7cc")]
+[node name="Grass2" parent="Grasses" instance=ExtResource("6_js7cc")]
 position = Vector2(84, 128)
 
-[node name="Grass7" parent="Grass" instance=ExtResource("6_js7cc")]
+[node name="Grass7" parent="Grasses" instance=ExtResource("6_js7cc")]
 position = Vector2(84, 121)
 
-[node name="Grass3" parent="Grass" instance=ExtResource("6_js7cc")]
+[node name="Grass3" parent="Grasses" instance=ExtResource("6_js7cc")]
 position = Vector2(244, 113)
 
-[node name="Grass4" parent="Grass" instance=ExtResource("6_js7cc")]
+[node name="Grass4" parent="Grasses" instance=ExtResource("6_js7cc")]
 position = Vector2(227, 113)
 
-[node name="Grass5" parent="Grass" instance=ExtResource("6_js7cc")]
+[node name="Grass5" parent="Grasses" instance=ExtResource("6_js7cc")]
 position = Vector2(211, 113)
 
-[node name="Grass6" parent="Grass" instance=ExtResource("6_js7cc")]
+[node name="Grass6" parent="Grasses" instance=ExtResource("6_js7cc")]
 position = Vector2(195, 113)
+
+[node name="Trees" type="Node2D" parent="."]
+
+[node name="Tree2" parent="Trees" instance=ExtResource("8_xvyfr")]
+position = Vector2(284, 26)
+
+[node name="Tree" parent="Trees" instance=ExtResource("8_xvyfr")]
+position = Vector2(224, 155)
+
+[node name="Tree3" parent="Trees" instance=ExtResource("8_xvyfr")]
+position = Vector2(171, 131)
 
 [node name="Bat" type="Node2D" parent="."]
 
 [node name="Bat1" parent="Bat" instance=ExtResource("7_r5176")]
-position = Vector2(258, 100)
+position = Vector2(212, 106)
 
 [node name="Bat2" parent="Bat" instance=ExtResource("7_r5176")]
-position = Vector2(146, 181)
+position = Vector2(297, 108)
 
 [node name="Bat3" parent="Bat" instance=ExtResource("7_r5176")]
 position = Vector2(94, 108)

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bji1wchg8x5u2"
-path="res://.godot/imported/SmallShadow.png-e79d35b026f4a1f2336c407c9ea144c0.ctex"
+uid="uid://bmmn1614186jl"
+path="res://.godot/imported/CliffTileset.png-bd6be3e205e794fccfa9fc7885ee6252.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Effect/SmallShadow.png"
-dest_files=["res://.godot/imported/SmallShadow.png-e79d35b026f4a1f2336c407c9ea144c0.ctex"]
+source_file="res://Assets/Environment/CliffTileset.png"
+dest_files=["res://.godot/imported/CliffTileset.png-bd6be3e205e794fccfa9fc7885ee6252.ctex"]
 
 [params]
 

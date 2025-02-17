@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://c4sctlrkhvy8h"]
 
-[ext_resource type="Texture2D" uid="uid://b02gguytio2sq" path="res://Assets/Environment/Grass.png" id="1_3066w"]
+[ext_resource type="Texture2D" uid="uid://b02gguytio2sq" path="res://Assets/Environment/Plant/Grass.png" id="1_3066w"]
 [ext_resource type="Script" path="res://Scripts/Environment/grass.gd" id="1_r5p3o"]
 [ext_resource type="PackedScene" uid="uid://ccg1sbhnxfct0" path="res://Prefab/Overlap/Hurtbox.tscn" id="3_ult6x"]
 
