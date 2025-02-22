@@ -1,6 +1,7 @@
-[gd_scene load_steps=55 format=3 uid="uid://bsq3l78136307"]
+[gd_scene load_steps=56 format=3 uid="uid://bsq3l78136307"]
 
 [ext_resource type="Script" path="res://Scripts/Character/Player/player.gd" id="1_xjine"]
+[ext_resource type="Texture2D" uid="uid://wj3mvxmatb4e" path="res://Assets/Environment/Shadows/MediumShadow.png" id="2_5o5tx"]
 [ext_resource type="Texture2D" uid="uid://cmcio38for5l" path="res://Assets/Character/Player.png" id="2_wdukc"]
 [ext_resource type="PackedScene" uid="uid://djkl7om3rc0ip" path="res://Prefab/Overlap/Hixtbox.tscn" id="3_y2ix0"]
 [ext_resource type="Script" path="res://Scripts/Overlap/SwordHitbox.gd" id="4_f628u"]
@@ -695,6 +696,10 @@ collision_mask = 17
 script = ExtResource("1_xjine")
 MAX_SPEED = 90.0
 
+[node name="ShadowSprite" type="Sprite2D" parent="."]
+position = Vector2(0, 1)
+texture = ExtResource("2_5o5tx")
+
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, -9)
 texture = ExtResource("2_wdukc")
@@ -736,7 +741,6 @@ shape = SubResource("CapsuleShape2D_jssht")
 disabled = true
 
 [node name="Hurtbox" parent="." instance=ExtResource("5_11djl")]
-collision_mask = 4
 
 [node name="CollisionShape2D" parent="Hurtbox" index="0"]
 position = Vector2(0, -6)

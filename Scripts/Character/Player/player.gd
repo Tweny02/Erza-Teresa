@@ -1,11 +1,11 @@
 '''
 # Godot v4.3
-v0.0.24.20250217
-	# Character
-		- player state
-		- bat ai
-	# EEffrct
-		- hit effect 丢失修复
+v0.1.1.20250222
+	# 问题修复
+		- max_health
+		
+	# layer 排序问题
+		- 先入后出
 	# UI
 		- 玩家生命
 		
@@ -81,7 +81,7 @@ func move_state(delta):
 	if Input.is_action_just_pressed('attack'):
 		state = ATTACK 
 	elif Input.is_action_just_pressed('roll'):
-		PlayerStates.max_health -= 1
+		
 		state = ROLL 
 		
 func attack_state():

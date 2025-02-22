@@ -744,8 +744,6 @@ offset_bottom = 207.0
 texture = ExtResource("4_svyyg")
 stretch_mode = 1
 
-[node name="HealthUI" parent="." instance=ExtResource("8_h0qsl")]
-
 [node name="Tile" type="Node2D" parent="."]
 
 [node name="Dirt" type="TileMapLayer" parent="Tile"]
@@ -756,8 +754,14 @@ tile_set = SubResource("TileSet_h5pf0")
 tile_map_data = PackedByteArray("AAD+//7/AQAAAAAAAAD+////AQAAAAEAAAD/////AQABAAEAAAAAAP//AQACAAEAAAAAAAAAAQACAAEAAAD//wAAAQABAAEAAAD+/wAAAQAAAAEAAAAGAAQAAQAAAAAAAAAHAAQAAQACAAAAAAAHAAUAAQACAAIAAAAGAAUAAQAAAAIAAAAIAAAAAQAAAAAAAAAJAAAAAQABAAAAAAAKAAAAAQABAAAAAAALAAAAAQACAAAAAAAIAAEAAQAAAAIAAAAJAAEAAQABAAIAAAAKAAEAAQABAAIAAAALAAEAAQACAAIAAAD9/wQAAQABAAMAAAD+/wQAAQABAAMAAAD//wQAAQABAAMAAAAAAAQAAQACAAMAAAD9/wIAAQABAAMAAAD+/wIAAQAGAAMAAAD//wIAAQABAAIAAAAAAAIAAQACAAIAAAD+/wEAAQAAAAEAAAD//wEAAQABAAEAAAAAAAEAAQACAAEAAAD///7/AQABAAAAAAAAAP7/AQACAAAAAAD8/wIAAQABAAMAAAD7/wIAAQAAAAMAAAD8/wQAAQABAAMAAAD7/wQAAQABAAMAAAD6/wQAAQAAAAMAAAAFAAAAAQADAAMAAAA=")
 tile_set = SubResource("TileSet_d0d5w")
 
+[node name="HealthUI" parent="." instance=ExtResource("8_h0qsl")]
+offset_left = 9.0
+offset_top = 6.0
+offset_right = 67.0
+offset_bottom = 19.0
+
 [node name="Player" parent="." instance=ExtResource("2_f8aot")]
-position = Vector2(67, 31)
+position = Vector2(182, 94)
 
 [node name="Bushes" type="Node2D" parent="."]
 

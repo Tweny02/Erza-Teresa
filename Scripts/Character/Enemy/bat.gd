@@ -12,6 +12,7 @@ enum {IDLE,WANDER,CHASE}
 @onready var playerDetectionZone = $PlayerDetectionZone
 @onready var sprite = $AnimatedSprite
 @onready var hurtbox = $Hurtbox
+@onready var softCollision = $SoftCollision
 var state = CHASE
 # =========================FUNC========================
 
@@ -34,6 +35,8 @@ func _physics_process(delta):
 	# 击退速度
 	velocity = velocity.move_toward(Vector2.ZERO,FRICTION * delta)
 	
+	if softCollision.is_colliding():
+		velocity =softCollision.get_push_vector() * delta * 400
 	move_and_slide()
 
 func seek_player():
