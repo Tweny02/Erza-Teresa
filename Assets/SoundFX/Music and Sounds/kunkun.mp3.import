@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dh5w8ifna3gtu"
+path="res://.godot/imported/kunkun.mp3-51e889ad161451094139f596053637c7.mp3str"
+
+[deps]
+
+source_file="res://Assets/SoundFX/Music and Sounds/kunkun.mp3"
+dest_files=["res://.godot/imported/kunkun.mp3-51e889ad161451094139f596053637c7.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

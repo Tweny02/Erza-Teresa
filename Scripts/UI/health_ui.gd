@@ -2,7 +2,7 @@ extends Control
 
 
 # ===========================VAR==========================
-var hearts = 5 : set = set_hearts 
+var hearts = 4 : set = set_hearts 
 var max_hearts = 1 : set = set_max_hearts
 
 @onready var heartUIEmpty = $HeartUIEmpty

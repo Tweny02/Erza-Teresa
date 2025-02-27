@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://d0u788558lfi7"
+path="res://.godot/imported/Normal No More.mp3-4580dc697e17ce858f10c66146ba9a74.mp3str"
+
+[deps]
+
+source_file="res://Assets/BGM/Normal No More.mp3"
+dest_files=["res://.godot/imported/Normal No More.mp3-4580dc697e17ce858f10c66146ba9a74.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

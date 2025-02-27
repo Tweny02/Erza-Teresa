@@ -1,19 +1,19 @@
 '''
 # Godot v4.3
-v0.1.1.20250222
+v0.2.1.20250227
 	# 问题修复
-		- max_health
-		
-	# layer 排序问题
-		- 先入后出
-	# UI
-		- 玩家生命
-		
+		- 成功解决图层排序问题，我们b站的大神太多了
+		- z index也可排序图层
+	# SoundFX
+		- 添加音效	
+	# 打包为.exe文件
 '''
 
 extends CharacterBody2D
 
 # =====================CONST========================
+const PlayerHurtSound = preload("res://Prefab/Character/Player/PlayerHurtSound.tscn")
+
 @export var MAX_SPEED = 100.0
 @export var ACCELERATION = 500
 @export var FRICTION = 500
@@ -103,3 +103,5 @@ func _on_hurtbox_area_entered(_area):
 	print(PlayerStates.health)
 	hurtbox.start_invincible(1)
 	hurtbox.create_hit_effect()
+	var playerHurtSound = PlayerHurtSound.instantiate()
+	get_tree().current_scene.add_child(playerHurtSound)
